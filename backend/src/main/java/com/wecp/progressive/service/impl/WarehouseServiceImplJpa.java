@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 package com.wecp.progressive.service.impl;
 
@@ -31,15 +32,37 @@ public class WarehouseServiceImplJpa implements WarehouseService {
     @Override
     public List<Warehouse> getAllWarehouses() throws SQLException {
         return warehouseRepository.findAll();
+=======
+package com.wecp.progressive.service.impl;
+
+import com.wecp.progressive.entity.Warehouse;
+import com.wecp.progressive.service.WarehouseService;
+import org.springframework.stereotype.Service;
+
+import java.sql.SQLException;
+import java.util.List;
+
+@Service
+public class WarehouseServiceImplJpa implements WarehouseService {
+
+    @Override
+    public List<Warehouse> getAllWarehouses() throws SQLException {
+        return List.of();
+>>>>>>> 9b7fc615716dac28924471eedee63ac4d7cc3b8b
     }
 
     @Override
     public int addWarehouse(Warehouse warehouse) throws SQLException {
+<<<<<<< HEAD
         return warehouseRepository.save(warehouse).getWarehouseId();
+=======
+        return -1;
+>>>>>>> 9b7fc615716dac28924471eedee63ac4d7cc3b8b
     }
 
     @Override
     public List<Warehouse> getWarehousesSortedByCapacity() throws SQLException {
+<<<<<<< HEAD
         List<Warehouse> sortedWarehouses = warehouseRepository.findAll();
         Collections.sort(sortedWarehouses);
         return sortedWarehouses;
@@ -56,10 +79,24 @@ public class WarehouseServiceImplJpa implements WarehouseService {
     public void deleteWarehouse(int warehouseId) throws SQLException {
         productRepository.deleteByWarehouseId(warehouseId);
         warehouseRepository.deleteById(warehouseId);
+=======
+        return List.of();
+    }
+
+    @Override
+    public void updateWarehouse(Warehouse warehouse) throws SQLException {
+
+    }
+
+    @Override
+    public void deleteWarehouse(int warehouseId) throws SQLException {
+
+>>>>>>> 9b7fc615716dac28924471eedee63ac4d7cc3b8b
     }
 
     @Override
     public Warehouse getWarehouseById(int warehouseId) throws SQLException {
+<<<<<<< HEAD
         return warehouseRepository.findByWarehouseId(warehouseId);
     }
 
@@ -72,3 +109,13 @@ public class WarehouseServiceImplJpa implements WarehouseService {
         return warehouseList;
     }
 }
+=======
+        return null;
+    }
+
+    @Override
+    public List<Warehouse> getWarehouseBySupplier(int supplierId) {
+        return null;
+    }
+}
+>>>>>>> 9b7fc615716dac28924471eedee63ac4d7cc3b8b

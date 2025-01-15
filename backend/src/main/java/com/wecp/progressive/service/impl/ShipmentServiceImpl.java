@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // @Service
 // public class ShipmentServiceImpl implements ShipmentService  {
 
@@ -73,4 +74,10 @@ public class ShipmentServiceImpl implements ShipmentService {
     public void deleteShipment(int shipmentId) throws SQLException {
         shipmentRepository.deleteById(shipmentId);
     }
+=======
+package com.wecp.progressive.service.impl;
+
+public class ShipmentServiceImpl  {
+
+>>>>>>> 9b7fc615716dac28924471eedee63ac4d7cc3b8b
 }

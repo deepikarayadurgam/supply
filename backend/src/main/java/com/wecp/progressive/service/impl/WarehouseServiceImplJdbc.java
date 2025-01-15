@@ -50,4 +50,8 @@ public class WarehouseServiceImplJdbc implements WarehouseService {
     public Warehouse getWarehouseById(int warehouseId) throws SQLException {
         return warehouseDAO.getWarehouseById(warehouseId);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 9b7fc615716dac28924471eedee63ac4d7cc3b8b

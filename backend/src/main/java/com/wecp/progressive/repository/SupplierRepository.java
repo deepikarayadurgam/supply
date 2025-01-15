@@ -1,5 +1,6 @@
 package com.wecp.progressive.repository;
 
+<<<<<<< HEAD
 import com.wecp.progressive.entity.Supplier;
 
 import javax.transaction.Transactional;
@@ -22,3 +23,8 @@ public interface SupplierRepository extends JpaRepository<Supplier, Integer> {
 
     Supplier findByEmail(String email);
 }
+=======
+
+public interface SupplierRepository {
+}
+>>>>>>> 9b7fc615716dac28924471eedee63ac4d7cc3b8b

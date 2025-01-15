@@ -1,5 +1,6 @@
 package com.wecp.progressive.entity;
 
+<<<<<<< HEAD
 import javax.persistence.*;
 import java.util.Date;
 
@@ -105,4 +106,8 @@ public class Shipment {
     public void setStatus(String status) {
         this.status = status;
     }
+=======
+public class Shipment {
+
+>>>>>>> 9b7fc615716dac28924471eedee63ac4d7cc3b8b
 }

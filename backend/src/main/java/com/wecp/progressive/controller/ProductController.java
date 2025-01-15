@@ -1,6 +1,7 @@
 package com.wecp.progressive.controller;
 
 import com.wecp.progressive.entity.Product;
+<<<<<<< HEAD
 import com.wecp.progressive.service.impl.ProductServiceImplJpa;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -73,5 +74,37 @@ public class ProductController {
     public ResponseEntity<List<Product>> getAllProductByWarehouse(@PathVariable int warehouseId) throws SQLException {
         List<Product> products = productServiceImplJpa.getAllProductByWarehouse(warehouseId);
         return new ResponseEntity<>(products, HttpStatus.OK);
+=======
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+
+@RestController
+public class ProductController {
+
+    public ResponseEntity<List<Product>> getAllProducts() {
+        return null;
+    }
+
+    public ResponseEntity<Product> getProductById(int productId) {
+        return null;
+    }
+
+    public ResponseEntity<Integer> addProduct(Product product) {
+        return null;
+    }
+
+    public ResponseEntity<Void> updateProduct(int productId, Product product) {
+        return null;
+    }
+
+    public ResponseEntity<Void> deleteProduct(int productId) {
+        return null;
+    }
+
+    public ResponseEntity<List<Product>> getAllProductByWarehouse(int warehouseId) {
+        return null;
+>>>>>>> 9b7fc615716dac28924471eedee63ac4d7cc3b8b
     }
 }

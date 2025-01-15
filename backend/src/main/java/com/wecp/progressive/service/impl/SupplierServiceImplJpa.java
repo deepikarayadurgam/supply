@@ -2,6 +2,7 @@ package com.wecp.progressive.service.impl;
 
 
 import com.wecp.progressive.entity.Supplier;
+<<<<<<< HEAD
 import com.wecp.progressive.exception.SupplierAlreadyExistsException;
 import com.wecp.progressive.exception.SupplierDoesNotExistException;
 import com.wecp.progressive.repository.ProductRepository;
@@ -16,11 +17,18 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.SQLException;
 import java.util.Collections;
+=======
+import com.wecp.progressive.service.SupplierService;
+import org.springframework.stereotype.Service;
+
+import java.sql.SQLException;
+>>>>>>> 9b7fc615716dac28924471eedee63ac4d7cc3b8b
 import java.util.List;
 
 @Service
 public class SupplierServiceImplJpa implements SupplierService {
 
+<<<<<<< HEAD
     @Autowired
     PasswordEncoder passwordEncoder;
 
@@ -57,10 +65,21 @@ public class SupplierServiceImplJpa implements SupplierService {
         }
         supplier.setPassword(passwordEncoder.encode(supplier.getPassword()));
         return supplierRepository.save(supplier).getSupplierId();
+=======
+    @Override
+    public List<Supplier> getAllSuppliers() throws SQLException {
+        return List.of();
+    }
+
+    @Override
+    public int addSupplier(Supplier supplier) throws SQLException {
+        return -1;
+>>>>>>> 9b7fc615716dac28924471eedee63ac4d7cc3b8b
     }
 
     @Override
     public List<Supplier> getAllSuppliersSortedByName() throws SQLException {
+<<<<<<< HEAD
         List<Supplier> sortedSuppliers = supplierRepository.findAll();
         Collections.sort(sortedSuppliers);
         return sortedSuppliers;
@@ -96,5 +115,23 @@ public class SupplierServiceImplJpa implements SupplierService {
             return supplierRepository.findBySupplierId(supplierId);
         }
         throw new SupplierDoesNotExistException("Supplier with the given supplierId does not exists");
+=======
+        return List.of();
+    }
+
+    @Override
+    public void updateSupplier(Supplier supplier) throws SQLException {
+
+    }
+
+    @Override
+    public void deleteSupplier(int supplierId) throws SQLException {
+
+    }
+
+    @Override
+    public Supplier getSupplierById(int supplierId) throws SQLException {
+        return null;
+>>>>>>> 9b7fc615716dac28924471eedee63ac4d7cc3b8b
     }
 }

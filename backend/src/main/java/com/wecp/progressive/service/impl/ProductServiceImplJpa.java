@@ -1,5 +1,6 @@
 package com.wecp.progressive.service.impl;
 
+<<<<<<< HEAD
 import java.util.List;
 
 import javax.transaction.Transactional;
@@ -59,5 +60,8 @@ public class ProductServiceImplJpa implements ProductService  {
     public List<Product> getAllProductByWarehouse(int warehouseId) {
         return productRepository.findAllByWarehouse_WarehouseId(warehouseId);
     }
+=======
+public class ProductServiceImplJpa  {
+>>>>>>> 9b7fc615716dac28924471eedee63ac4d7cc3b8b
 
 }
